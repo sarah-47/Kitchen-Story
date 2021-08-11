@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--head-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet"
+     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+     <link rel="stylesheet" href="index.css">
+    <title>Kitchen Story</title>
+   
+  </head>
+
+  <!--body-->
+<body>
+    <div class="container">
+        <!--header-->
+    <div class="header-container">
+      <header><h1>Kitchen Story</h1></header>
+      <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li > <a href="#Vegetables">Vegetables</a></li>
+            <li ><a href="#Fruits" >Fruits</a></li>
+            <li ><a href="#Meat" >Meat</a></li> 
+            <li ><a href="#Cake">Cake</a></li>
+            <li ><a  href="login.html">Log in</a></li>
+            <li ><a href="cart.html">Cart<i class="fa fa-shopping-cart"></i></a></li>
+        <li>
+            <div class="search">
+                <form >
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit" aria-placeholder="Search..."><i class="fa fa-search"></i></button>
+                </form>
+              </div>   
+        </li>
+        </ul>   
+        
+      </nav>
+      </div>
+
+      <!--content-->
+    <div class="content">
+      <div class="row" >
+        <h3 id="Vegetables" class="titl">Vegetables</h3>
+        <div class="col-md-4 -sm-6 col-xs-12 " id="item" >
+        <h4 id="name1">potatoes</h4>
+        <img src="imgs/veg/potatoes.png" alt="potatoes img">
+        <h5 id="price1">Price:5</h5>
+        <label>Qty</label>
+        <input type="number" min="1" id="qty1"><br>
+        <button type="button" value="add" onclick="AddtoCart(1)">Add</button>
+        </div>
+
+        <div class=" col-md-4 col-sm-6 col-xs-12" id="item" >
+          <h4 id="name2">onions</h4>
+          <img src="imgs/veg/onions.png" alt="onions img">
+          <h5 id="price2">Price:10</h5>
+          <label>Qty</label>
+          <input id="qty2" type="number" min="1"><br>
+          <button type="button" value="add" onclick="AddtoCart(2)">Add</button>
+        </div>
+  
+          <div class=" col-md-4 col-sm-6 col-xs-12" id="item" >
+            <h4 id="name3">tomatoes</h4>
+            <img src="imgs/veg/tomatoes.png" alt="tomatoes img">
+            <h5 id="price3">Price:4</h5>
+            <label>Qty</label>
+            <input id="qty3"type="number" min="1"><br>
+            <button type="button" value="add" onclick="AddtoCart(3)">Add</button>
+          </div>
+    
+            <div class=" col-md-4 col-sm-6 col-xs-12" id="item" >
+              <h4 id="name4">okra</h4>
+              <img src="imgs/veg/okra.png" alt="okra img">
+              <h5 id="price4">Price:12</h5>
+              <label>Qty</label>
+              <input id="qty4" type="number" min="1"><br>
+              <button type="button" value="add" onclick="AddtoCart(4)">Add</button>
+            </div>
+      
+      </div>
+    
+      <div class="row">
+        <h3 id="Fruits" class="titl">Fruits</h3>
+        <div class=" col-md-4 col-sm-6 col-xs-12" id="item" >
+        <h4 id="name5">apple</h4>
+        <img src="imgs/fruits/apple_small.gif" alt="apple img">
+        <h5 id="price5">Price:5</h5>
+        <label>Qty</label>
+        <input id="qty5" type="number" min="1"><br>
+        <button type="button" value="add" onclick="AddtoCart(5)">Add</button>
+        </div>
+
+        <div class=" col-md-4 col-sm-6 col-xs-12" id="item" >
+          <h4 id="name6">banana</h4>
+          <img src="imgs/fruits/banana_small.gif" alt="banana img">
+          <h5 id="price6">Price:5</h5>
+          <label>Qty</label>
+          <input id="qty6" type="number" min="1"><br>
+          <button type="button" value="add" onclick="AddtoCart(6)">Add</button>
+        </div>
+  
+          <div class=" col-md-4 col-sm-6 col-xs-12" id="item" >
+            <h4 id="name7">grapefruit</h4>
+            <img src="imgs/fruits/grapefruit_samll.gif" alt="grapefruit img">
+            <h5 id="price7">Price:4</h5>
+            <label>Qty</label>
+            <input id="qty7"type="number" min="1"><br>
+            <button type="button" value="add" onclick="AddtoCart(7)">Add</button>
+          </div>
+    
+            <div class=" col-md-4 col-sm-6 col-xs-12" id="item" >
+              <h4 id="name8">kiwi</h4>
+              <img src="imgs/fruits/kiwi_small.gif" alt="kiwi img">
+              <h5 id="price8">Price:12</h5>
+              <label>Qty</label>
+              <input id="qty8" type="number" min="1"><br>
+              <button type="button" value="add" onclick="AddtoCart(8)">Add</button>
+            </div>
+      
+      </div><div class="row">
+        <h3 id="Meat" class="titl">Meat</h3>
+        <div class=" col-md-4 col-sm-6 col-xs-12" id="item" >
+        <h4 id="name9">chicken</h4>
+        <img src="imgs/meat/chicken.png" alt="chicken img">
+        <h5 id="price9">Price:20</h5>
+        <label>Qty</label>
+        <input id="qty9"type="number" min="1"><br>
+        <button type="button" value="add" onclick="AddtoCart(9)">Add</button>
+        </div>
+
+        <div class=" col-md-4 col-sm-6 col-xs-12" id="item" >
+          <h4 id="name10">beef</h4>
+          <img src="imgs/meat/beef.png" alt="beef img">
+          <h5 id="price10">Price:25</h5>
+          <label>Qty</label>
+          <input id="qty10" type="number" min="1"><br>
+          <button type="button" value="add" onclick="AddtoCart(10)">Add</button>
+        </div>
+  
+          <div class=" col-md-4 col-sm-6 col-xs-12" id="item" >
+            <h4 id="name11">salmon</h4>
+            <img src="imgs/meat/salmon.png" alt="salmon img">
+            <h5 id="price11">Price:34</h5>
+            <label>Qty</label>
+            <input id="qty11"type="number" min="1"><br>
+            <button type="button" value="add" onclick="AddtoCart(11)">Add</button>
+          </div>
+    
+            <div class=" col-md-4 col-sm-6 col-xs-12" id="item" >
+              <h4 id="name12">cooked meat</h4>
+              <img src="imgs/meat/cooked-meat.png" alt="cooked meat img">
+              <h5 id="price12">Price:25</h5>
+              <label>Qty</label>
+              <input id="qty12"type="number" min="1"><br>
+              <button type="button" value="add" onclick="AddtoCart(12)">Add</button>
+            </div>
+      
+      </div><div class="row">
+        <h3 id="Cake" class="titl">Cake</h3>
+        <div class="col-md-4 col-sm-6 col-xs-12" id="item" >
+        <h4 id="name13">chocolate cake</h4>
+        <img src="imgs/cake/choco-cake.png" alt="choco cake img">
+        <h5 id="price13">Price:50</h5>
+        <label>Qty</label>
+        <input id="qty13"type="number" min="1"><br>
+        <button type="button" value="add" onclick="AddtoCart(13)">Add</button>
+        </div>
+
+        <div class=" col-md-4 col-sm-6 col-xs-12" id="item" >
+          <h4 id="name14">cake</h4>
+          <img src="imgs/cake/cake.png" alt="cake img">
+          <h5 id="price14">Price:30</h5>
+          <label>Qty</label>
+          <input id="qty14" type="number" min="1"><br>
+          <button type="button" value="add" onclick="AddtoCart(14)">Add</button>
+        </div>
+  
+          <div class="col-md-4 col-sm-6 col-xs-12" id="item" >
+            <h4 id="name15">cake</h4>
+            <img src="imgs/cake/cake-2.png" alt="cake img">
+            <h5 id="price15">Price:40</h5>
+            <label>Qty</label>
+            <input id="qty15"type="number" min="1"><br>
+            <button type="button" value="add" onclick="AddtoCart(15)">Add</button>
+          </div>
+    
+            <div class=" col-md-4 col-sm-6 col-xs-12" id="item" >
+              <h4 id="name16">cake</h4>
+              <img src="imgs/cake/cake-3.png" alt="cake img">
+              <h5 id="price16">Price:22</h5>
+              <label>Qty</label>
+              <input id="qty16"type="number" min="1"><br>
+              <button type="button" value="add" onclick="AddtoCart(16)">Add</button>
+            </div>
+      
+      </div> 
+</div>
+  
+      <!--footer-->
+    <div class="footer">
+<footer>
+    <p>Phase 2 Project</p>
+    <p> BY Sarah Alsaedi 2021</p>
+    </footer>
+    </div>
+      </div>
+    <script>
+
+      var order=[]
+      function AddtoCart(x){
+
+    
+var itemname=document.getElementById("name"+x).innerHTML;
+var itemprice=document.getElementById("price"+x).innerHTML.split(':');
+var itemPrice=itemprice[1];
+var itemqty=document.getElementById("qty"+x).value;
+
+
+var singleProduct = {};
+
+   singleProduct.Name=itemname;
+   singleProduct.price=itemPrice;
+   singleProduct.qty=itemqty;
+   order.push(singleProduct);
+
+   console.log(order);
+
+   sessionStorage.setItem("orders",JSON.stringify(order)); }
+    </script>
+</body>
+</html>

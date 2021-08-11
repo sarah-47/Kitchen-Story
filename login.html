@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--head-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet"
+     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+     <link rel="stylesheet" href="index.css">
+    <title>Kitchen Story</title>
+    <script src="index.js"></script>
+  </head>
+
+  <!--body-->
+<body>
+    <div class="container">
+        <!--header-->
+    <div class="row header-container">
+      <header><h1>Kitchen Story</h1></header>
+      <nav>
+        <ul>
+            <li><a href="index.html" >Home</a></li>
+           
+            <li ><a href="cart.html">Cart<i class="fa fa-shopping-cart"></i></a></li>
+        <li>
+            <div class="search">
+                <form >
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit" aria-placeholder="Search..."><i class="fa fa-search"></i></button>
+                </form>
+              </div>   
+        </li>
+        </ul>   
+        
+      </nav>
+     </div>
+
+      <!--content--> 
+    <div class="row content">
+  
+        <div class="col-lg-4">
+            <h1>User Log in </h1>
+            <div class="jumbotron">
+            <label>Enter user name:</label><input id="username" type="text" placeholder="User name"><br>
+            <label>Enter user password:</label><input id="password" type="password" placeholder="Password"><br><br>
+            <button class="btn btn-primary " type="submit" onclick="validate()">Login</button>
+            <button class="btn btn-warning" type="reset">Reset</button>
+            </div>
+                </div>
+  
+    </div>
+
+      <!--footer-->
+    <div class="row footer">
+<footer>
+    <p>Phase 2 Project</p>
+    <p> BY Sarah Alsaedi 2021</p>
+    </footer>
+    </div>
+</div>
+</body>
+</html>

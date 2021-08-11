@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--head-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet"
+     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+     <link rel="stylesheet" href="index.css">
+    <title>Kitchen Story</title>
+    
+</head>
+
+  <!--body-->
+<body>
+    <div class="container">
+        <!--header-->
+    <div class="header-container">
+      <header><h1>Kitchen Story</h1></header>
+      <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li ><a  href="login.html">Log in</a></li>
+        <li>
+            <div class="search">
+                <form >
+                  <input type="text" placeholder="Search.." name="search">
+                  <button type="submit" aria-placeholder="Search..."><i class="fa fa-search"></i></button>
+                </form>
+              </div>   
+        </li>
+        </ul>   
+        
+      </nav>
+      </div>
+
+      <!--content-->
+    <div class="content">
+
+            <table cellpadding="4" cellspacing="4" id="cart_table">
+                    <thead id="c_header">
+                        <tr>
+                            <td>
+                                Name
+                            </td>
+                            <td>
+                                price
+                            </td>
+                            <td>
+                                Qty
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody id="cart">
+    
+                    </tbody>
+                    <tfoot id="c_footer">
+                        <tr>
+                          <td>
+                            Total:
+                          </td>
+                            <td  colspan="2"  id="cart_total">
+    
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+
+    <!--footer-->
+    <div class="footer">
+<footer>
+    <p>Phase 2 Project</p>
+    <p> BY Sarah Alsaedi 2021</p>
+    </footer>
+    </div>
+</div>
+<script>
+
+var s=sessionStorage.getItem('orders');
+ var order=JSON.parse(s)
+ console.log(order);
+
+ var total=0;
+
+for(var item in order){ 
+    var t=document.getElementById("cart")
+
+    var row=t.insertRow();
+    var cellName = row.insertCell(0);
+    var cellPrice = row.insertCell(1);
+    var cellQty=row.insertCell(2);
+    var celltotal=row.insertCell(3);
+
+    cellName.innerHTML=order[item].Name;
+    cellPrice.innerHTML=order[item].price;
+    cellQty.innerHTML=order[item].qty;
+    var n=parseInt((order[item].price)*parseInt(order[item].qty));
+    total+=n;            
+
+    }
+    document.getElementById("cart_total").innerHTML = total;
+
+
+    </script>
+</body>
+</html>
